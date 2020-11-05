@@ -1,0 +1,12 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+void insertTimestamp() {
+	LocalDateTime myDateObj = LocalDateTime.now();
+	DateTimeFormatter myFormatObj =
+		DateTimeFormatter.ofPattern("MM-dd-yyyy hh:mm:ss a");
+	String formattedDate = myDateObj.format(myFormatObj);
+	textArea.setSelectedText(formattedDate);
+}
+
+insertTimestamp();
